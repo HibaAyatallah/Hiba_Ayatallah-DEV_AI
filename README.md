@@ -58,7 +58,14 @@ streamlit run ui/app.py
 ```
 L'interface s'ouvre sur **[http://localhost:8501](http://localhost:8501)** et affiche en légende : `API prête : tfidf-logreg (TP2, models/sentiment.joblib)`.
 
-### 5. Utiliser la commande CLI `sentiment` et la roue (TP6)
+### 5. Lancer le client web statique
+Avec le modèle produit et l'API lancée, ouvrez un autre terminal à la racine du dépôt :
+```bash
+python -m http.server 5500 --directory web
+```
+Ouvrez **[http://localhost:5500](http://localhost:5500)**. Le client appelle `/health` et `/predict` sur l'API configurée dans « Connexion à l'API » (par défaut `http://127.0.0.1:8000`). L'API doit autoriser l'origine du client via CORS.
+
+### 6. Utiliser la commande CLI `sentiment` et la roue (TP6)
 Une fois le paquet installé en mode éditable (`pip install -e .`) :
 ```bash
 # Vérifier la version unique du paquet
@@ -186,6 +193,10 @@ sentiment-app/
 ├── ui/                             # Interface graphique Streamlit (TP5)
 │   ├── __init__.py                 # Paquet Python ui
 │   ├── client.py                   # Client HTTP vers l'API (/health, /predict, traitement de lot)
+├── web/                            # Client HTML/CSS/JavaScript statique vers l'API
+│   ├── index.html
+│   ├── styles.css
+│   └── client.js
 ├── sentiment_app/                  # Le paquet Python installable (TP6)
 │   ├── __init__.py                 # Version unique du paquet (0.6.0)
 │   ├── __main__.py                 # Point d'entrée exécutable (python -m sentiment_app)

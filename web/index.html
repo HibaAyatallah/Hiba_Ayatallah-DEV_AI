@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ee">
+    <title>Analyse de sentiment</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="client.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Analyse de sentiment, accueil">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>sentiment<span class="brand-dot">.</span></span>
+        </a>
+        <span class="topbar-note">Outil d’analyse des avis</span>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow"><span class="eyebrow-line"></span> ÉCOUTER · COMPRENDRE · AGIR</p>
+        <h1 id="page-title">Que disent<br>vos clients&nbsp;?</h1>
+        <p class="intro">Collez un avis pour estimer son sentiment. En cas d’incertitude, le modèle vous le signale : la décision reste humaine.</p>
+      </section>
+
+      <section class="workspace" aria-label="Analyse d’un avis">
+        <form id="analyze-form" class="review-card">
+          <div class="card-heading">
+            <label for="review-text">Avis à analyser</label>
+            <span class="field-hint">En français · 1 à 2&nbsp;000 caractères</span>
+          </div>
+          <textarea id="review-text" name="text" maxlength="2000" rows="6" placeholder="Ex. Livraison rapide et produit conforme, je recommande…" required></textarea>
+          <div class="form-footer">
+            <span id="char-count" class="char-count">0 / 2&nbsp;000</span>
+            <button id="analyze-button" class="button-primary" type="submit">
+              <span>Analyser l’avis</span><span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+        </form>
+
+        <aside class="result-card" aria-live="polite" aria-atomic="true">
+          <div class="result-topline"><span class="status-dot" aria-hidden="true"></span><span id="result-status">En attente d’un avis</span></div>
+          <div id="result-content" class="result-content">
+            <div class="empty-icon" aria-hidden="true">✳</div>
+            <h2>Votre résultat apparaîtra ici</h2>
+            <p>Le score indique la confiance du modèle, pas une certitude.</p>
+          </div>
+          <div class="result-meta"><span>MODÈLE DE SENTIMENT</span><span>REVUE HUMAINE SI BESOIN</span></div>
+        </aside>
+      </section>
+
+      <details class="settings">
+        <summary>Connexion à l’API</summary>
+        <div class="settings-body">
+          <label for="api-url">Adresse de l’API</label>
+          <div class="connection-row">
+            <input id="api-url" type="url" value="http://127.0.0.1:8000" autocomplete="url" spellcheck="false">
+            <button id="check-api" class="button-secondary" type="button">Vérifier</button>
+          </div>
+          <p id="api-status" class="api-status">L’API locale doit être lancée pour analyser un avis.</p>
+        </div>
+      </details>
+
+      <footer class="footer"><span>Classification automatique · français</span><span>Une aide à la décision, pas un verdict définitif.</span></footer>
+    </main>
+  </body>
+</html>

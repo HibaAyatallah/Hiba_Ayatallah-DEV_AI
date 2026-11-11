@@ -1,0 +1,21 @@
+text,attendu,difficulte,erreur_connue
+"Commande reçue en deux jours, emballage soigné, rien à redire",POSITIVE,,
+"Le vendeur m'a rappelé le jour même, très professionnel",POSITIVE,,
+"Excellent produit, conforme à la description, je recommande",POSITIVE,,
+"Notice claire, montage en dix minutes, très satisfait",POSITIVE,,
+"Rapport qualité prix imbattable, solide et léger",POSITIVE,,
+"Service client réactif, remboursement reçu en une semaine",POSITIVE,,
+"Livraison en avance et finitions propres",POSITIVE,,
+"Colis arrivé ouvert et produit cassé",NEGATIVE,,
+"Aucune réponse du service client depuis trois semaines",NEGATIVE,,
+"L'application plante dès l'ouverture, inutilisable",NEGATIVE,,
+"Pièces manquantes et notice incompréhensible",NEGATIVE,,
+"Facture erronée et aucun geste commercial",NEGATIVE,,
+"Commande jamais reçue, remboursement toujours en attente",NEGATIVE,,
+"Taille trop petite et retour payant, je regrette cet achat",NEGATIVE,,
+"Pas déçu du tout, je recommande",POSITIVE,négation,
+"Je ne recommande pas ce vendeur",NEGATIVE,négation,"sac de mots : « recommande » compte, « ne pas » se perd"
+"Arrivé cassé, bravo le transporteur",NEGATIVE,ironie,
+"Parfait au déballage, sauf que ensuite il se casse au bout de deux utilisations",NEGATIVE,mitigé,
+"Un film magnifique, les acteurs sont excellents",POSITIVE,autre domaine,
+"Scénario ennuyeux, je me suis endormi avant la fin",NEGATIVE,autre domaine,"vocabulaire du cinéma absent du jeu de démonstration"

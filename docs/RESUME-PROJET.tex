@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\title{Résumé du projet \texttt{sentiment-app}}
+\author{Hiba Ayatallah et Manal Wassila}
+\date{7 octobre 2026}
+
+\begin{document}
+\maketitle
+
+\section{Présentation}
+
+\texttt{sentiment-app} est le dépôt de travail du binôme pour le cours
+\emph{Développement et déploiement d'applications intelligentes}. Le projet
+porte sur une application d'analyse de sentiments à partir d'avis. La première
+semaine a permis de mettre en place le dépôt Git, l'environnement Python, les
+tests et le cadrage du projet. Les prochaines étapes prévues comprennent une API
+FastAPI, une interface Streamlit et la gestion des données et modèles.
+
+\section{Travail réalisé}
+
+Le dépôt comprend les consignes et guides du TP, les fiches de cadrage, un jeu
+de données d'exemple, des scripts de diagnostic et une suite de tests avec
+\texttt{pytest}. Les tests valident notamment l'environnement, les fiches de
+cadrage et l'historique Git du binôme.
+
+\section{Difficultés rencontrées}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Pytest absent du Python global.} La première commande
+    \texttt{python -m pytest} a utilisé l'interpréteur système, dans lequel le
+    module \texttt{pytest} n'était pas installé. La solution a été d'utiliser
+    directement l'interpréteur de l'environnement virtuel du projet :
+    \texttt{\detokenize{.\.venv\Scripts\python.exe -m pytest -q}}.
+
+    \item \textbf{Commit de la seconde membre absent de l'historique local.}
+    Le test complet signalait qu'un seul auteur de commit était visible,
+    alors que le commit de Hiba avait déjà été envoyé sur GitHub. Après un
+    \texttt{git fetch origin} et une mise à jour en fast-forward avec
+    \texttt{git pull --ff-only origin main}, le dépôt local a récupéré le
+    commit distant et le test d'historique a réussi.
+\end{enumerate}
+
+\section{Résultat}
+
+Après la synchronisation avec GitHub, la suite complète s'est terminée avec
+\textbf{38 tests réussis}. Les 12 tests de cadrage avaient également réussi.
+Le dépôt local était ensuite synchronisé avec la branche \texttt{main} de
+GitHub.
+
+\end{document}

@@ -1,11 +1,11 @@
-# sentiment-app : dépôt du binôme
+# sentiment-app : projet de Hiba Ayatallah
 
 <div align="center">
 
-| **Hiba Ayatallah** | **Manal Wassila** |
-| :---: | :---: |
-| <img src="docs/captures/hiba_ayatallah.jpg" width="200" alt="Hiba Ayatallah"> | <img src="docs/captures/manal_wassila.png" width="200" alt="Manal Wassila"> |
-| [@HibaAyatallah](https://github.com/HibaAyatallah) | [@manalwassila](https://github.com/manalwassila) |
+| **Hiba Ayatallah** |
+| :---: |
+| <img src="docs/captures/hiba_ayatallah.jpg" width="200" alt="Hiba Ayatallah"> |
+| [@HibaAyatallah](https://github.com/HibaAyatallah) |
 
 </div>
 
@@ -164,7 +164,7 @@ python -c "import httpx; r = httpx.post('http://127.0.0.1:8000/predict', json={'
 | `docs/semaine4.md` | Réponses argumentées et mesures d'exécution de la semaine 4 (Couverture, courbe de seuil, bilan du jeu d'or et audit statique) |
 | `docs/semaine3.md` | Analyse de la conception d'API (Fail-Fast au démarrage et défense en profondeur Pydantic vs modèle) |
 | `docs/semaine2.md` | Analyse qualitative des erreurs du sac de mots sur les avis mitigés |
-| `docs/journal-tp1-tp5.md` | Journal de bord officiel du binôme avec les résultats réels des contrôles T0 à T34 |
+| `docs/journal-tp1-tp5.md` | Journal de projet avec les résultats réels des contrôles T0 à T34 |
 | `docs/cadrage/` | Fiches de cadrage métier formalisées lors du TP1 (pharmacie, règlement, avis négatifs) |
 
 ---
@@ -234,10 +234,9 @@ sentiment-app/
 
 ---
 
-## Membres du Binôme et Répartition des Travaux
+## Auteur et Répartition des Travaux
 
-| Membre | Identifiant GitHub | Contributions principales (TP1 à TP6) |
+| Auteur | Identifiant GitHub | Contributions principales (TP1 à TP6) |
 | :--- | :--- | :--- |
-| **Hiba Ayatallah** (Membre A) | [@HibaAyatallah](https://github.com/HibaAyatallah) | - **TP1 :** Création du dépôt GitHub, cadrage multicritère des cas d'usage, structuration initiale de la documentation.<br>- **TP2 :** Cadrage métier, validation des métriques de classification et des seuils F1 macro.<br>- **TP3 :** Validation des endpoints `/health` et `/predict`, tests manuels Swagger et vérification du démarrage *fail-fast*.<br>- **TP4 :** Rédaction et annotation des avis du jeu d'or (`data/jeu_or.csv`), identification des cas difficiles et erreurs connues (`test_jeu_or.py`), conception des tests d'intégration et pannes 500 (`test_integration.py`), intégration des linters `ruff`, typage `mypy` et configuration `pre-commit`.<br>- **TP5 :** Recette des codes d'erreur et de l'indisponibilité (T32), validation de l'ingestion de lot et export CSV (T33), rédaction des réponses argumentées dans `docs/semaine5.md`, mise à jour du journal T0-T34 et rédaction de `Resume/RESUME_TP5.md`.<br>- **TP6 :** Installation du kit TP6, migration de `predict.py` dans le paquet `sentiment_app/`, suppression définitive de `sys.path` dans `api/model.py`, validation des contrôles T35 à T37, rédaction du compte rendu `docs/semaine6.md` et finalisation du journal T0-T41. |
-| **Manal Wassila** (Membre B) | [@manalwassila](https://github.com/manalwassila) | - **TP1 :** Configuration de l'environnement virtuel Python 3.11, diagnostic de build et CI GitHub Actions.<br>- **TP2 :** Pipeline scikit-learn, entraînement du modèle sur le corpus Allociné, analyse qualitative des erreurs d'inférence.<br>- **TP3 :** Architecture de l'API FastAPI, implémentation des schémas Pydantic et des tests d'API (`test_api.py`).<br>- **TP4 :** Implémentation des tests aux limites et des propriétés Hypothesis (`test_limites.py`), analyse de la courbe de seuil (`courbe_seuil.py`), gestion de l'abstention à 0.60, rédaction de `docs/semaine4.md` et `Resume/RESUME_TP4.md`.<br>- **TP5 :** Installation du kit TP5, configuration de Streamlit dans la CI, recette des contrôles T29 à T31 sur l'interface utilisateur.<br>- **TP6 :** Installation en mode éditable `pip install -e .`, validation de la commande CLI `sentiment` (T38), construction de la roue wheel (T39), test d'inférence étanche hors du dépôt avec `SENTIMENT_MODELE` (T40), documentation dans `CHANGELOG.md` et vérification de la CI GitHub Actions avec étiquette `v0.6.0`. |
+| **Hiba Ayatallah** | [@HibaAyatallah](https://github.com/HibaAyatallah) | - **TP1 :** Création du dépôt GitHub, cadrage multicritère des cas d'usage, structuration initiale de la documentation.<br>- **TP2 :** Cadrage métier, validation des métriques de classification et des seuils F1 macro.<br>- **TP3 :** Validation des endpoints `/health` et `/predict`, tests manuels Swagger et vérification du démarrage *fail-fast*.<br>- **TP4 :** Rédaction et annotation des avis du jeu d'or (`data/jeu_or.csv`), identification des cas difficiles et erreurs connues (`test_jeu_or.py`), conception des tests d'intégration et pannes 500 (`test_integration.py`), intégration des linters `ruff`, typage `mypy` et configuration `pre-commit`.<br>- **TP5 :** Recette des codes d'erreur et de l'indisponibilité (T32), validation de l'ingestion de lot et export CSV (T33), rédaction des réponses argumentées dans `docs/semaine5.md`, mise à jour du journal T0-T34 et rédaction de `Resume/RESUME_TP5.md`.<br>- **TP6 :** Installation du kit TP6, migration de `predict.py` dans le paquet `sentiment_app/`, suppression définitive de `sys.path` dans `api/model.py`, validation des contrôles T35 à T37, rédaction du compte rendu `docs/semaine6.md` et finalisation du journal T0-T41. |
 
